@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipesApp';
+  public nombre: string = 'hugo andres diaz bernal';
+  public flag: boolean = false;
+
+
+  mostrarNombre() {
+    this.flag = !this.flag
+  }
 }
