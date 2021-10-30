@@ -5,9 +5,21 @@
 
 <div class="grid">
   <div class="col-4">
-    <p-card header="Ventas Netas" subheader="Ventas netas del año">
+    <p-card header="Ventas Netas" subheader="del presente año">
       <i class="pi pi-dollar"></i>
-      {{ ventasNetas | number: '1.2-2' }}</p-card
+      {{ ventasNetas | number: "1.2-2" }}</p-card
+    >
+  </div>
+  <div class="col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año">
+      {{
+        ventasNetas + 2000000 | currency: "USD":"symbol-narrow":"1.4-4"
+      }}</p-card
+    >
+  </div>
+  <div class="col-4">
+    <p-card header="Ganacia porcentual" subheader="del presente año">
+      {{ porcentaje | percent: '2.2-2' }}</p-card
     >
   </div>
 </div>

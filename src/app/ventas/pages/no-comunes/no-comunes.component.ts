@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-no-comunes',
@@ -6,11 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class NoComunesComponent implements OnInit {
+export class NoComunesComponent {
 
-  constructor() { }
+  public nombre: string = 'Susana';
+  public genero: string = 'femenino';
 
-  ngOnInit(): void {
+  public clientes: string[] = ['Maria', 'Arturo', 'Camilo', 'Luis'];
+
+  public invitacionObj = {
+    'masculino': 'invitarlo',
+    'femenino': 'invitarla'
+  }
+
+  public clientesMpa = {
+    '=0': 'Actualmente no tenemos cliente esperando',
+    '=1': 'Actualmente  tenemos un cliente esperando',
+    '=2': 'Actualmente tenemos 2 clientes esperando',
+    'other': 'Actualmente tenemos # clientes esperando',
   }
 
 }
